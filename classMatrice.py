@@ -68,7 +68,7 @@ class Matrice:
         if not(self.column == B.line): raise IndexError("Matrice must have same line than the number of column of the otehr matrice")
 
         matri = [[0 for _ in range(B.column)] for _ in range(self.line)]; somme = 0
-        for i in range(self.column): 
+        for i in range(self.line): 
             for j in range(B.column): 
                 for k in range(B.line): somme += self.mat[i][k]*B.mat[k][j]
                 matri[i][j] = somme; somme = 0
